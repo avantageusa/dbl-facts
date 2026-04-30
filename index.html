@@ -1,26 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Campaign Performance Audit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Performance Audit Report</title>
     <style>
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; max-width: 800px; margin: auto; }
-        h1 { color: #333; }
-        .stats { background: #f4f4f4; padding: 15px; border-radius: 5px; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            color: #333;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .meta-info {
+            margin-bottom: 30px;
+        }
+        .meta-info p {
+            margin: 5px 0;
+        }
+        h2 {
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th {
+            text-align: left;
+            border-bottom: 1px solid black;
+            padding-bottom: 5px;
+        }
+        td {
+            padding: 8px 0;
+        }
+        .numeric {
+            text-align: center;
+            width: 25%;
+        }
+        .summary-note {
+            font-style: italic;
+            margin: 20px 0;
+        }
+        .analysis h3 {
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <h1>Campaign Performance Audit Report</h1>
-    <p><strong>Subject:</strong> Discrepancies in DBL Ad Campaign Reporting</p>
-    <p><strong>Prepared for:</strong> Marcus Katz</p>
-    <hr>
-    <div class="stats">
-        <p><strong>Total Clicks:</strong> 28,334 (Reported) / 2,359 (Actual)</p>
-        <p><strong>Over 90% of clicks did not result in tracked sessions.</strong></p>
+
+    <div class="header">Campaign Performance Audit Report</div>
+
+    <div class="meta-info">
+        <p>Subject: Discrepancies in DBL Ad Campaign Reporting</p>
+        <p>Prepared for: Marcus Katz</p>
+        <p>Date Range Reviewed: June 25 - August 15, 2025</p>
+        <p>Source Reports: DBL Performance Report & Avantage Analytics Summary</p>
     </div>
-    <h3>Analysis of Traffic & Attribution</h3>
-    <ul>
-        <li><strong>Traffic Attribution Failure:</strong> Only 2,359 users recorded.</li>
-        <li>Indicates broken UTM tags or artificial traffic (bots).</li>
-    </ul>
+
+    <h2>Summary of Discrepancies</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th><u>Metric</u></th>
+                <th class="numeric"><u>DBL Reported</u></th>
+                <th class="numeric"><u>Avantage (Actual)</u></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Clicks</td>
+                <td class="numeric">28,334</td>
+                <td class="numeric">2,359</td>
+            </tr>
+            <tr>
+                <td>Accounts Created</td>
+                <td class="numeric">6</td>
+                <td class="numeric">3</td>
+            </tr>
+            <tr>
+                <td>Verified Accounts</td>
+                <td class="numeric">5</td>
+                <td class="numeric">3</td>
+            </tr>
+            <tr>
+                <td>Deposits</td>
+                <td class="numeric">1</td>
+                <td class="numeric">0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p class="summary-note">Over 90% of DBL's claimed clicks did not result in actual tracked sessions on our platform.</p>
+
+    <div class="analysis">
+        <h2>Analysis of Traffic & Attribution</h2>
+        <p>1. Traffic Attribution Failure:</p>
+        <ul>
+            <li>DBL reports 28,334 clicks, but Avantage recorded only 2,359 users from DBL-tagged UTM links.</li>
+            <li>Indicates broken or missing UTM tags, redirect issues, or artificial traffic (e.g., bots).</li>
+            <li>This discrepancy exists across all ad creatives, not isolated to any campaign.</li>
+        </ul>
+    </div>
+
 </body>
 </html>
+
